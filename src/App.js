@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import Headerfooter from "./components/Headerfooter";
+import Mainpage from "./pages/Mainpage";
+import Catalogue from "./pages/Catalogue";
+import CatalogueCategory from "./pages/CatalogueCategory";
+import ProductPage from "./pages/ProductPage";
+import QuickView from "./pages/QuickView";
+import ShoppingBag from "./pages/ShoppingBag";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Headerfooter></Headerfooter>}>
+          <Route path="/" element={<Mainpage />} />
+          <Route path="/new-in" element={<Catalogue />} />
+          <Route path="/category" element={<CatalogueCategory />} />
+          <Route path="/product-page" element={<ProductPage />} />
+          <Route path="/view" element={<QuickView />} />
+          <Route path="/shopping-bag" element={<ShoppingBag />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

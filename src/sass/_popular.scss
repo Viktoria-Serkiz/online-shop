@@ -1,0 +1,12 @@
+.popular {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  padding-bottom: 100px;
+  padding-top: 328px;
+  margin-bottom: 100px;
+  &__goods {
+    display: flex;
+    align-items: center;
+  }
+}

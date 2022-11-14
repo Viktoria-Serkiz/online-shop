@@ -1,0 +1,90 @@
+.footer {
+  background-color: $lightgrey;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 52px;
+  }
+  &__navigation {
+    display: flex;
+    margin-right: 25px;
+    &--list {
+      margin-right: 142px;
+      &:nth-child(1) {
+        width: 175px;
+      }
+      &:nth-child(2) {
+        width: 120px;
+      }
+    }
+    &--item {
+      list-style: none;
+      font-size: 14px;
+      line-height: 16px;
+      color: $grey;
+      padding-bottom: 20px;
+      &:nth-child(1) {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $header;
+      }
+    }
+  }
+  &__info {
+    &--text {
+      font-size: 14px;
+      line-height: 22px;
+      color: $grey;
+    }
+  }
+  &__form {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    color: $white;
+    &--input {
+      font-size: 14px;
+      line-height: 16px;
+      color: $greyform;
+      padding: 10px 142px 10px 12px;
+      border: none;
+    }
+    &--button {
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: $white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 2px;
+      background-color: $header;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    &--link {
+      padding-right: 20px;
+    }
+  }
+  &__copyright {
+    background-color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--text {
+      font-size: 14px;
+      line-height: 22px;
+      color: $greyform;
+    }
+  }
+}

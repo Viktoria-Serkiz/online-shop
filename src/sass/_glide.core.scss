@@ -1,0 +1,29 @@
+.glide {
+  margin-top: 30px;
+  &__slide {
+    display: flex;
+    margin: 0 -15px;
+  }
+  &__arrows {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+  &__arrow {
+    border: none;
+    background-color: transparent;
+    &--left {
+      transform: rotateY(180deg);
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
+  &__title {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    color: $header;
+  }
+}

@@ -1,0 +1,60 @@
+.header {
+  background-color: $header;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  &__icons {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  &__menu {
+    background-color: $white;
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+  &__form {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    &--input {
+      border: none;
+      margin-left: 15px;
+      font-size: 13px;
+      line-height: 16px;
+      width: 73px;
+    }
+    &--button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  &__nav {
+    &--list {
+      display: flex;
+    }
+    &--item {
+      list-style: none;
+      margin-right: 35px;
+      color: $header;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      background-image: url(../img/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: right center;
+      padding-right: 20px;
+    }
+  }
+}

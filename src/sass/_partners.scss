@@ -1,0 +1,19 @@
+.partners {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    list-style: none;
+    margin-right: 95px;
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: $header;
+  }
+}
