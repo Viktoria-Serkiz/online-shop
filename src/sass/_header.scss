@@ -47,7 +47,6 @@
     &--item {
       list-style: none;
       margin-right: 35px;
-      color: $header;
       font-weight: 600;
       font-size: 13px;
       line-height: 16px;
@@ -55,6 +54,11 @@
       background-repeat: no-repeat;
       background-position: right center;
       padding-right: 20px;
+      cursor: pointer;
+    }
+    &--link {
+      color: $header;
+      text-decoration: none;
     }
   }
 }

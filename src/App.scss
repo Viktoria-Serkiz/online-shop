@@ -1,9 +1,9 @@
 @import "./main";
-@import "./fonts";
+@import "./sass/fonts";
 @import "./variables";
 @import "./sass/header";
 @import "./sass/sale";
-@import "./sass/footer";
+@import "./components/Footer/footer";
 @import "./sass/popular";
 @import "./sass/item";
 @import "./sass/layout";
@@ -13,3 +13,4 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "./sass/card";
 @import "./sass/glide.core";
+@import "./components/Search/categories";

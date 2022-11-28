@@ -1,10 +1,17 @@
+import Header from "../components/Header";
+import Categories from "../components/Search/Categories";
+import Size from "../components/Search/Size";
+import Footer from "../components/Footer/Footer";
+
 const Catalogue = () => {
   return (
     <>
-      <div>
-        <h1>Catalogue</h1>
-        <p>Some content</p>
+      <Header />
+      <div className="container">
+        <Categories />
+        <Size />
       </div>
+      <Footer />
     </>
   );
 };
