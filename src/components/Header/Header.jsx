@@ -1,7 +1,8 @@
 import Headericons from "./Headericons";
 import Nav from "./Nav";
 import Searchbar from "./Searchbar";
-import Logo from "../img/dressnote.svg";
+import Logo from "../../img/dressnote.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (

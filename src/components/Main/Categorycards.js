@@ -1,9 +1,9 @@
-import Dresses from "../img/categories/dresses.jpg";
-import Skirts from "../img/categories/skirts.jpg";
-import Tops from "../img/categories/tops.jpg";
-import Bags from "../img/categories/bags.jpg";
-import Swimwear from "../img/categories/swimwear.jpg";
-import Shoes from "../img/categories/shoes.jpg";
+import Dresses from "../../img/categories/dresses.jpg";
+import Skirts from "../../img/categories/skirts.jpg";
+import Tops from "../../img/categories/tops.jpg";
+import Bags from "../../img/categories/bags.jpg";
+import Swimwear from "../../img/categories/swimwear.jpg";
+import Shoes from "../../img/categories/shoes.jpg";
 
 const Categorycards = () => {
   return (

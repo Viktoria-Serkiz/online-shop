@@ -1,4 +1,4 @@
-import Logoblack from "../img/logo-black.svg";
+import Logoblack from "../../img/logo-black.svg";
 
 const Footercopyright = () => {
   return (

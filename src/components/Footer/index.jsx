@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 
-const indexFooter = () => {
-  return <Footer></Footer>;
+const IndexFooter = () => {
+  return <Footer />;
 };
 
-export default indexFooter;
+export default IndexFooter;

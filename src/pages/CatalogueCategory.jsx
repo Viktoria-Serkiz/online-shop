@@ -36,22 +36,20 @@ const CatalogueCategory = () => {
           </div>
         )}
         {clothing &&
-          clothing.map(({ title, image, description, price }) => {
+          clothing.map(({ title, id, image, description, price }) => {
             return (
-              <>
-                <div className="card">
-                  <div className="card__img">
-                    <img src={`${image}`} alt="" width="255" />
-                  </div>
-                  <p className="card__brand">{`${title}`}</p>
-                  <p className="card__item">{`${description}`}</p>
-                  <p className="card__price">{`${price}`}</p>
-
-                  <button className="card__like">
-                    <img src={Like} alt="" width="16" height="14" />
-                  </button>
+              <div className="card" key={id}>
+                <div className="card__img">
+                  <img src={`${image}`} alt="" width={255} />
                 </div>
-              </>
+                <p className="card__brand">{`${title}`}</p>
+                <p className="card__item">{`${description}`}</p>
+                <p className="card__price">{`${price}`}</p>
+
+                <button className="card__like">
+                  <img src={Like} alt="" width={16} height={14} />
+                </button>
+              </div>
             );
           })}
         {error && error}

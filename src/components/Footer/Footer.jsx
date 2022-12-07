@@ -1,7 +1,7 @@
-import Socialmedia from "../Socialmedia";
-import { Footercopyright } from "../Footercopyright";
-import { FooterForm } from "../FooterForm";
-import { FooterNav } from "../FooterNav";
+import Socialmedia from "./Socialmedia";
+import { Footercopyright } from "./Footercopyright";
+import { FooterForm } from "./FooterForm";
+import { FooterNav } from "./FooterNav";
 
 const Footer = () => {
   return (

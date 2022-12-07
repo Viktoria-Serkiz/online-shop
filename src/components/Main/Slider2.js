@@ -1,34 +1,49 @@
+import { useEffect } from "react";
 import Glide from "@glidejs/glide";
-import Arrow from "../img/right-arrow.svg";
-import Pic1 from "../img/picks-for-you/pic-1.jpg";
-import Pic2 from "../img/picks-for-you/pic-2.jpg";
-import Pic3 from "../img/picks-for-you/pic-3.jpg";
-import Pic4 from "../img/picks-for-you/pic-4.jpg";
-import Like from "../img/like.svg";
+
+import ReclaimedVintage from "../../img/picks-for-you/pic-1.jpg";
+import TedBaker from "../../img/picks-for-you/pic-2.jpg";
+import Monki from "../../img/picks-for-you/pic-3.jpg";
+import PeopleTree from "../../img/picks-for-you/pic-4.jpg";
+import Like from "../../img/like.svg";
+
+const glide = {
+  perView: 4,
+  gap: 30,
+  autoplay: 4000,
+  animationDuration: 1000,
+  animationTimingFunc: "linear",
+  type: "slider",
+};
 
 const Slider2 = () => {
-  document.querySelectorAll(".glide-slide").forEach(() => {
-    let glideItem = new Glide(".glide-slide", {
-      type: "carousel",
-      startAt: 0,
-      perView: 4,
-      gap: 30,
-      autoplay: 3000,
-      animationDuration: 1000,
-      animationTimingFunc: "linear",
-    });
-    glideItem.mount();
-  });
+  const slider = new Glide(".glide", glide);
+
+  useEffect(() => {
+    slider.mount();
+  }, [slider]);
+
   return (
     <>
       <div className="container">
-        <div class=" glide-slide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              <li class="glide__slide">
+        <div className="glide">
+          <h2 className="glide__title">Our picks for you</h2>
+          <div className="glide__arrows" data-glide-el="controls">
+            <button
+              className="glide__arrow glide__arrow--left"
+              data-glide-dir="<"
+            ></button>
+            <button
+              className="glide__arrow glide__arrow--right"
+              data-glide-dir=">"
+            ></button>
+          </div>
+          <div className="glide__track" data-glide-el="track">
+            <ul className="glide__slides">
+              <li className="glide__slide">
                 <div className="card">
                   <div className="card__img">
-                    <img src={Pic1} alt="" />
+                    <img src={ReclaimedVintage} alt="" />
                   </div>
                   <p className="card__brand">Reclaimed Vintage</p>
                   <p className="card__item">Lounge style pleated suit</p>
@@ -38,10 +53,10 @@ const Slider2 = () => {
                   </button>
                 </div>
               </li>
-              <li class="glide__slide">
+              <li className="glide__slide">
                 <div className="card">
                   <div className="card__img">
-                    <img src={Pic2} alt="" />
+                    <img src={TedBaker} alt="" />
                   </div>
                   <p className="card__brand">Ted Baker</p>
                   <p className="card__item">Cropped suit in pink</p>
@@ -51,10 +66,10 @@ const Slider2 = () => {
                   </button>
                 </div>
               </li>
-              <li class="glide__slide">
+              <li className="glide__slide">
                 <div className="card">
                   <div className="card__img">
-                    <img src={Pic3} alt="" />
+                    <img src={Monki} alt="" />
                   </div>
                   <p className="card__brand">Monki</p>
                   <p className="card__item">Fine knit mini dress</p>
@@ -64,10 +79,10 @@ const Slider2 = () => {
                   </button>
                 </div>
               </li>
-              <li class="glide__slide">
+              <li className="glide__slide">
                 <div className="card">
                   <div className="card__img">
-                    <img src={Pic4} alt="" />
+                    <img src={PeopleTree} alt="" />
                   </div>
                   <p className="card__brand">People tree</p>
                   <p className="card__item">Printed mini shirt dress</p>
@@ -78,15 +93,6 @@ const Slider2 = () => {
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="glide__arrows" data-glide-el="controls">
-            <h2 className="glide__title">Our picks for you</h2>
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              <img src={Arrow} alt="" />
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-              <img src={Arrow} alt="" />
-            </button>
           </div>
         </div>
       </div>

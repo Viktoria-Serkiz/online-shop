@@ -1,7 +1,7 @@
 @import "./main";
 @import "./sass/fonts";
 @import "./variables";
-@import "./sass/header";
+@import "./components/Header/header";
 @import "./sass/sale";
 @import "./components/Footer/footer";
 @import "./sass/popular";
@@ -11,7 +11,8 @@
 @import "./sass/background";
 @import "./sass/partners";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @import "./sass/card";
-@import "./sass/glide.core";
+@import "./sass/glide";
 @import "./components/Search/categories";
 @import "./sass/spinner";

@@ -1,8 +1,8 @@
-import NewBalance from "../img/partners/new-balance.svg";
-import Martens from "../img/partners/martens.svg";
-import Converse from "../img/partners/converce.svg";
-import Steve from "../img/partners/steve-madden.svg";
-import Ugg from "../img/partners/ugg-australia.svg";
+import NewBalance from "../../img/partners/new-balance.svg";
+import Martens from "../../img/partners/martens.svg";
+import Converse from "../../img/partners/converce.svg";
+import Steve from "../../img/partners/steve-madden.svg";
+import Ugg from "../../img/partners/ugg-australia.svg";
 
 const Partners = () => {
   return (

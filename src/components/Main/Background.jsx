@@ -1,4 +1,4 @@
-import Girl from "../img/background-img.jpg";
+import Girl from "../../img/background-img.jpg";
 
 const Background = () => {
   return (

@@ -1,4 +1,4 @@
-import Categorycards from "./Categorycards";
+import Categorycards from "../Main/Categorycards";
 
 const Populargoods = () => {
   return (

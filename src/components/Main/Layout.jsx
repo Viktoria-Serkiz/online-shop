@@ -1,5 +1,5 @@
-import Mainpage1 from "../img/mainpage1.jpg";
-import Mainpage2 from "../img/mainpage2.jpg";
+import Mainpage1 from "../../img/mainpage1.jpg";
+import Mainpage2 from "../../img/mainpage2.jpg";
 
 const Layout = () => {
   return (

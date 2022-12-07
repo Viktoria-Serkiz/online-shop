@@ -1,4 +1,4 @@
-import Eco from "../img/eco-collection.jpg";
+import Eco from "../../img/eco-collection.jpg";
 
 const Ecocollection = () => {
   return (
