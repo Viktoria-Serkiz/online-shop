@@ -1,0 +1,84 @@
+.newin {
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    color: $header;
+  }
+  &__sub {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    &--text {
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey;
+    }
+  }
+  &__more {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &--text {
+      font-size: 12px;
+      line-height: 16px;
+      color: $greyform;
+      padding-bottom: 8px;
+      border-bottom: 2px solid $border;
+      width: 286px;
+      text-align: center;
+    }
+    &--btn {
+      cursor: pointer;
+      border-radius: 2px;
+      border: 1px solid $grey;
+      background-color: $white;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: $header;
+      padding: 10px 91px;
+      margin: 24px 0 60px;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+    }
+  }
+}
+
+.photoNewIn {
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin: 80px 0 40px 0;
+  &__title {
+    position: absolute;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 42px;
+    color: $header;
+  }
+  &__subtitle {
+    position: absolute;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 42px;
+    margin-top: 55px;
+    color: $darkgrey;
+  }
+  &__photo {
+    display: block;
+  }
+}
+
+.cards__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards__container {
+  width: 825px;
+}

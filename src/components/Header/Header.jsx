@@ -13,15 +13,15 @@ const Header = () => {
             <img src={Logo} alt="" width="164px" height="16px" />
           </div>
           <div>
-            <Headericons></Headericons>
+            <Headericons />
           </div>
         </div>
       </div>
       <div className="header__menu">
         <div className="container">
           <div className="header__menu--list">
-            <Nav></Nav>
-            <Searchbar></Searchbar>
+            <Nav />
+            <Searchbar />
           </div>
         </div>
       </div>

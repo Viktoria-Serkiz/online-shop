@@ -6,7 +6,7 @@ const Populargoods = () => {
       <div className="popular">
         <div className="container">
           <div className="popular__goods">
-              <Categorycards></Categorycards>
+              <Categorycards />
           </div>
         </div>
       </div>

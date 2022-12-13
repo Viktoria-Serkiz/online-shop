@@ -13,16 +13,16 @@ import Footer from "../components/Footer/index";
 const Mainpage = () => {
   return (
     <>
-      <Header></Header>
-      <Sale></Sale>
-      <Populargoods></Populargoods>
-      <Slider></Slider>
-      <Layout></Layout>
-      <Slider2 className="glide2"></Slider2>
-      <Ecocollection></Ecocollection>
-      <Background></Background>
-      <Partners></Partners>
-      <Footer></Footer>
+      <Header />
+      <Sale />
+      <Populargoods />
+      <Slider />
+      <Layout />
+      <Slider2 className="glide2" />
+      <Ecocollection />
+      <Background />
+      <Partners />
+      <Footer />
       {/* <Card></Card> */}
     </>
   );

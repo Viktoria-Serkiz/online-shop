@@ -27,17 +27,37 @@
     background-color: transparent;
     display: flex;
     align-items: center;
+    position: relative;
     &--input {
       border: none;
       margin-left: 15px;
       font-size: 13px;
       line-height: 16px;
       width: 73px;
+      outline: none;
     }
     &--button {
       border: none;
       background-color: transparent;
       cursor: pointer;
+    }
+    &--search {
+      position: absolute;
+      width: 220px;
+      right: 0;
+      top: 100%;
+      background-color: $lightgrey;
+      border: 2em;
+      color: $header;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      padding: 10px;
+      z-index: 1;
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
   }
   &__nav {

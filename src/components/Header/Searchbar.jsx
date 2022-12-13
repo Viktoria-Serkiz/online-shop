@@ -1,4 +1,35 @@
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+
 const Searchbar = () => {
+  const [searchResult, setSearchResult] = useState([]);
+  const { clothing } = useSelector((store) => store.clothing);
+
+  useEffect(() => {
+    setSearchResult(clothing);
+  }, [clothing]);
+
+  const searchFunc = (e) => {
+    const filtredData = clothing.filter((item) => {
+      if (e.target.value == "") {
+        return null;
+      } else if (
+        item.title.toLowerCase().includes(e.target.value.toLowerCase())
+      ) {
+        return item;
+      }
+    });
+    if (filtredData.length == 0 && e.target.value.length !== 0) {
+      setSearchResult([
+        {
+          title: "No data",
+        },
+      ]);
+    } else {
+      setSearchResult(filtredData);
+    }
+  };
+
   return (
     <>
       <form className="header__form">
@@ -22,7 +53,15 @@ const Searchbar = () => {
           type="text"
           placeholder="Search for..."
           className="header__form--input"
+          onChange={searchFunc}
         />
+        {!!searchResult && (
+          <div className="header__form--search">
+            {searchResult.map(({ title, id }) => {
+              return <p key={`srch__${id}`}>{title}</p>;
+            })}
+          </div>
+        )}
       </form>
     </>
   );
