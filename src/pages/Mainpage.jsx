@@ -18,7 +18,7 @@ const Mainpage = () => {
       <Populargoods></Populargoods>
       <Slider></Slider>
       <Layout></Layout>
-      <Slider2></Slider2>
+      <Slider2 className="glide2"></Slider2>
       <Ecocollection></Ecocollection>
       <Background></Background>
       <Partners></Partners>

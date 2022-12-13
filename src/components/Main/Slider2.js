@@ -10,14 +10,12 @@ import Like from "../../img/like.svg";
 const glide = {
   perView: 4,
   gap: 30,
-  autoplay: 4000,
-  animationDuration: 1000,
-  animationTimingFunc: "linear",
-  type: "slider",
+  autoplay: 3000,
+  type: "carrousel",
 };
 
-const Slider2 = () => {
-  const slider = new Glide(".glide", glide);
+const Slider2 = ({ className = "glide2" }) => {
+  const slider = new Glide(`.${className}`, glide);
 
   useEffect(() => {
     slider.mount();
@@ -26,7 +24,7 @@ const Slider2 = () => {
   return (
     <>
       <div className="container">
-        <div className="glide">
+        <div className={className}>
           <h2 className="glide__title">Our picks for you</h2>
           <div className="glide__arrows" data-glide-el="controls">
             <button

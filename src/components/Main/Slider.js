@@ -16,8 +16,8 @@ const glideConfig = {
   type: "slider",
 };
 
-const Slider = () => {
-  const slider = new Glide(".glide", glideConfig);
+const Slider = ({ className = "glide" }) => {
+  const slider = new Glide(`.${className}`, glideConfig);
 
   useEffect(() => {
     slider.mount();
@@ -26,7 +26,7 @@ const Slider = () => {
   return (
     <>
       <div className="container">
-        <div className="glide">
+        <div className={className}>
           <h2 className="glide__title">New arrivals</h2>
           <div className="glide__arrows" data-glide-el="controls">
             <button

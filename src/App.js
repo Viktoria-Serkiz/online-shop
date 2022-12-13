@@ -1,7 +1,7 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Mainpage from "./pages/Mainpage";
-import Catalogue from "./pages/Catalogue";
+import NewIn from "./pages/NewIn";
 import CatalogueCategory from "./pages/CatalogueCategory";
 import ProductPage from "./pages/ProductPage";
 import QuickView from "./pages/QuickView";
@@ -13,7 +13,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Mainpage />} />
-        <Route path="/new-in" element={<Catalogue />} />
+        <Route path="/new-in" element={<NewIn />} />
         <Route path="/category" element={<CatalogueCategory />} />
         <Route path="/product-page" element={<ProductPage />} />
         <Route path="/view" element={<QuickView />} />
