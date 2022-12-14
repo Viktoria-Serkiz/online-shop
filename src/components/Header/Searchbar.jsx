@@ -56,7 +56,7 @@ const Searchbar = () => {
           <div className="header__form--search">
             {searchResult.map(({ title, id }, index) => {
               return (
-                <Link to={`product/${id}`}>
+                <Link to={`product-page/${id}`}>
                   <p key={`srch__${index}`}>{title}</p>
                 </Link>
               );

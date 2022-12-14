@@ -1,0 +1,81 @@
+.searchpage {
+  display: flex;
+  justify-content: center;
+  &__container {
+    width: 1110px;
+  }
+  &__bread {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin: 24px 0px 40px 0px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    &--img {
+      display: block;
+      width: 610px;
+      height: 900px;
+      border-radius: 2px;
+    }
+    &--wrap {
+      width: 350px;
+    }
+    &--subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      color: $grey;
+      margin-bottom: 8px;
+    }
+    &--title {
+      font-family: "Merriweather";
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 36px;
+      color: $header;
+      margin: 8px 0 16px;
+    }
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: $red;
+    margin: 30px 0 33px;
+  }
+  &__selectcolor {
+    display: flex;
+    align-items: center;
+    &--subtitle {
+      font-size: 14px;
+      line-height: 16px;
+      color: $grey;
+    }
+    &--subcolor {
+      margin-left: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $category;
+    }
+  }
+  &__color {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 30px 0;
+    &--btn {
+      cursor: pointer;
+      border: none;
+      width: 30px;
+      height: 30px;
+    }
+    &--red {
+      background-color: $red;
+    }
+    &--violet {
+      background-color: $violet;
+      margin-left: 10px;
+    }
+  }
+}
