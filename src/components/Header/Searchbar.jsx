@@ -1,13 +1,10 @@
 import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Searchbar = () => {
   const [searchResult, setSearchResult] = useState([]);
   const { clothing } = useSelector((store) => store.clothing);
-
-  useEffect(() => {
-    setSearchResult(clothing);
-  }, [clothing]);
 
   const searchFunc = (e) => {
     const filtredData = clothing.filter((item) => {
@@ -57,8 +54,12 @@ const Searchbar = () => {
         />
         {!!searchResult && (
           <div className="header__form--search">
-            {searchResult.map(({ title, id }) => {
-              return <p key={`srch__${id}`}>{title}</p>;
+            {searchResult.map(({ title, id }, index) => {
+              return (
+                <Link to={`product/${id}`}>
+                  <p key={`srch__${index}`}>{title}</p>
+                </Link>
+              );
             })}
           </div>
         )}
