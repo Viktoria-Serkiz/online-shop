@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Star } from "./Star";
 
-const StarRating = ({ rate = 3 }) => {
+const StarRating = ({ rate = 3, vote = "139" }) => {
   const [value, setValue] = useState(rate);
   const [hover, setHover] = useState(rate);
 
@@ -22,7 +22,9 @@ const StarRating = ({ rate = 3 }) => {
           </button>
         );
       })}
-      <p className="rating__text">{value} (139 reviews) </p>
+      <p className="rating__text">
+        {value} ({vote} reviews)
+      </p>
     </div>
   );
 };

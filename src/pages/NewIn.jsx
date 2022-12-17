@@ -1,37 +1,15 @@
-import Header from "../components/Header";
 import Categories from "../components/Search/Categories";
 import Size from "../components/Search/Size";
-import Footer from "../components/Footer/Footer";
-import { getClothing } from "../api/clothing";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  clothingLoading,
-  clothingSuccess,
-  clothingError,
-} from "../store/actions/clothingAction";
+import { useSelector } from "react-redux";
 import newInPhoto from "../img/newInPhoto.jpg";
 import Spinner from "../img/spinner.svg";
 import Card from "../components/Card";
 
 const NewIn = () => {
-  const dispatch = useDispatch();
   const { loading, error, clothing } = useSelector((store) => store.clothing);
-
-  useEffect(() => {
-    dispatch(clothingLoading());
-    getClothing()
-      .then(({ data }) => {
-        dispatch(clothingSuccess(data));
-      })
-      .catch((error) => {
-        dispatch(clothingError(error.massage));
-      });
-  }, []);
 
   return (
     <>
-      <Header />
       <div className="container newin">
         <div className="search">
           <Categories />
@@ -81,7 +59,6 @@ const NewIn = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -13,22 +13,23 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    &--img {
+    &_img {
       display: block;
       width: 610px;
       height: 900px;
       border-radius: 2px;
+      object-fit: contain;
     }
-    &--wrap {
+    &_wrap {
       width: 350px;
     }
-    &--subtitle {
+    &_subtitle {
       font-size: 14px;
       line-height: 18px;
       color: $grey;
       margin-bottom: 8px;
     }
-    &--title {
+    &_title {
       font-family: "Merriweather";
       font-weight: 700;
       font-size: 26px;
@@ -47,12 +48,12 @@
   &__selectcolor {
     display: flex;
     align-items: center;
-    &--subtitle {
+    &_subtitle {
       font-size: 14px;
       line-height: 16px;
       color: $grey;
     }
-    &--subcolor {
+    &_subcolor {
       margin-left: 6px;
       font-weight: 600;
       font-size: 14px;
@@ -64,18 +65,82 @@
     display: flex;
     align-items: center;
     margin: 12px 0 30px 0;
-    &--btn {
+    &_btn {
       cursor: pointer;
       border: none;
       width: 30px;
       height: 30px;
+      display: flex;
+      margin-right: 10px;
     }
-    &--red {
-      background-color: $red;
+  }
+  &__description {
+    margin-top: 42px;
+    &_title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $header;
+      margin-bottom: 16px;
     }
-    &--violet {
-      background-color: $violet;
-      margin-left: 10px;
+    &_text {
+      font-size: 14px;
+      line-height: 22px;
+      color: $greyform;
+    }
+  }
+  &__size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    &_subtitle {
+      font-size: 14px;
+      line-height: 16px;
+      color: $grey;
+    }
+  }
+}
+
+.selectsize {
+  background: #ffffff;
+  border: 1px solid #cccbcf;
+  border-radius: 2px;
+  list-style: none;
+  display: flex;
+  position: relative;
+  &__option {
+    margin: 12px auto 12px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $greyform;
+    &_show {
+      display: block;
+    }
+  }
+  &__size {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 41px;
+    background-color: $white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    right: 0;
+    &-element {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 12px auto 12px 20px;
+      list-style: none;
+      color: $header;
+      cursor: pointer;
+      &:hover {
+        color: $red;
+        font-weight: 700;
+      }
+    }
+    &_hidden {
+      display: none;
     }
   }
 }

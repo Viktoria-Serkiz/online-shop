@@ -1,12 +1,40 @@
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { getClothing } from "../../api/clothing";
+import {
+  clothingLoading,
+  clothingSuccess,
+  clothingError,
+} from "../../store/actions/clothingAction";
 
 const Searchbar = () => {
   const [searchResult, setSearchResult] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
   const { clothing } = useSelector((store) => store.clothing);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (clothing.length == 0) {
+      dispatch(clothingLoading());
+      getClothing()
+        .then(({ data }) => {
+          dispatch(clothingSuccess(data));
+        })
+        .catch((error) => {
+          dispatch(clothingError(error.massage));
+        });
+    }
+  }, []);
+
+  const closeSearch = () => {
+    setSearchInput("");
+    setSearchResult([]);
+  };
 
   const searchFunc = (e) => {
+    setSearchInput(e.target.value);
     const filtredData = clothing.filter((item) => {
       if (e.target.value == "") {
         return null;
@@ -51,14 +79,21 @@ const Searchbar = () => {
           placeholder="Search for..."
           className="header__form--input"
           onChange={searchFunc}
+          value={searchInput}
         />
         {!!searchResult && (
           <div className="header__form--search">
             {searchResult.map(({ title, id }, index) => {
-              return (
-                <Link to={`product-page/${id}`}>
-                  <p key={`srch__${index}`}>{title}</p>
+              return !!id ? (
+                <Link
+                  to={`product/${id}`}
+                  onClick={closeSearch}
+                  key={`srch__${index}`}
+                >
+                  <p className="header__form--title">{title}</p>
                 </Link>
+              ) : (
+                <p key={`srch__${index}`}>{title}</p>
               );
             })}
           </div>

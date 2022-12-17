@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer/Footer";
 import { getClothing } from "../api/clothing";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -28,7 +26,6 @@ const CatalogueCategory = () => {
 
   return (
     <>
-      <Header />
       <div className="container card__container">
         {loading && (
           <div className="spinner">
@@ -54,7 +51,6 @@ const CatalogueCategory = () => {
           })}
         {error && error}
       </div>
-      <Footer />
     </>
   );
 };
