@@ -7,21 +7,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    &--title {
+    &_title {
       font-family: "Merriweather", serif;
       font-weight: 700;
       font-size: 36px;
       line-height: 46px;
       color: $header;
     }
-    &--text {
+    &_text {
       font-size: 14px;
       line-height: 22px;
       color: $grey;
       margin-top: 16px;
       margin-bottom: 30px;
     }
-    &--button {
+    &_button {
       cursor: pointer;
       border: none;
       color: $white;

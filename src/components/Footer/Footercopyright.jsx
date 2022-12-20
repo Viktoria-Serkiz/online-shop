@@ -4,11 +4,11 @@ const Footercopyright = () => {
   return (
     <div className="footer__copyright">
       <div className="container">
-        <div className="footer__copyright--wrapper">
+        <div className="footer__copyright_wrapper">
           <div>
             <img src={Logoblack} alt="dressnote" width="164px" height="16px" />
           </div>
-          <p className="footer__copyright--text">
+          <p className="footer__copyright_text">
             (С) 2021 All rights reserved
           </p>
         </div>

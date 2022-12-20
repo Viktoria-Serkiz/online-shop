@@ -12,10 +12,13 @@
     background-color: transparent;
     cursor: pointer;
     margin-left: 20px;
+    & svg:hover path{
+      stroke: $pink;
+    }
   }
   &__menu {
     background-color: $white;
-    &--list {
+    &_list {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -28,7 +31,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    &--input {
+    &_input {
       border: none;
       margin-left: 15px;
       font-size: 13px;
@@ -36,20 +39,18 @@
       width: 73px;
       outline: none;
     }
-    &--button {
+    &_button {
       border: none;
       background-color: transparent;
       cursor: pointer;
     }
-    &--search {
+    &_search {
       position: absolute;
       width: 220px;
       right: 0;
       top: 100%;
       border: 2em;
       color: $header;
-      // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      //   rgba(0, 0, 0, 0.22) 0px 15px 12px;
       padding: 10px;
       z-index: 1;
       p {
@@ -61,10 +62,10 @@
     }
   }
   &__nav {
-    &--list {
+    &_list {
       display: flex;
     }
-    &--item {
+    &_item {
       list-style: none;
       margin-right: 35px;
       font-weight: 600;
@@ -76,9 +77,18 @@
       padding-right: 20px;
       cursor: pointer;
     }
-    &--link {
+    &_link {
       color: $header;
       text-decoration: none;
+      &:hover {
+        color: $grey;
+      }
     }
+  }
+  &__favorites {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

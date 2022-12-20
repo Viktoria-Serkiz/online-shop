@@ -39,17 +39,7 @@ const ProductPage = () => {
             <h2 className="searchpage__info_title">{title}</h2>
             <StarRating rate={Math.round(rating?.rate)} vote={rating?.count} />
             <p className="searchpage__price">${price}</p>
-            {/* <div className="searchpage__selectcolor">
-              <p className="searchpage__selectcolor_subtitle">Select color:</p>
-              <p className="searchpage__selectcolor_subcolor">
-                White/red patterned
-              </p>
-            </div> */}
             <ColorSelection />
-            {/* <div className="searchpage__color">
-              <button className="searchpage__color--red searchpage__color--btn"></button>
-              <button className="searchpage__color--violet searchpage__color--btn"></button>
-            </div> */}
             <div className="searchpage__size">
               <p className="searchpage__size_subtitle">Select size:</p>
               <p className="searchpage__size_subtitle">Size guide</p>

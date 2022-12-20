@@ -58,7 +58,7 @@ const Searchbar = () => {
   return (
     <>
       <form className="header__form">
-        <button type="button" className="header__form--button">
+        <button type="button" className="header__form_button">
           <svg
             width="20"
             height="20"
@@ -77,12 +77,12 @@ const Searchbar = () => {
         <input
           type="text"
           placeholder="Search for..."
-          className="header__form--input"
+          className="header__form_input"
           onChange={searchFunc}
           value={searchInput}
         />
         {!!searchResult && (
-          <div className="header__form--search">
+          <div className="header__form_search">
             {searchResult.map(({ title, id }, index) => {
               return !!id ? (
                 <Link
@@ -90,7 +90,7 @@ const Searchbar = () => {
                   onClick={closeSearch}
                   key={`srch__${index}`}
                 >
-                  <p className="header__form--title">{title}</p>
+                  <p className="header__form_title">{title}</p>
                 </Link>
               ) : (
                 <p key={`srch__${index}`}>{title}</p>

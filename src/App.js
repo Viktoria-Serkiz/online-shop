@@ -8,16 +8,18 @@ import ProductPage from "./pages/ProductPage";
 import QuickView from "./pages/QuickView";
 import ShoppingBag from "./pages/ShoppingBag";
 import NotFound from "./pages/NotFound.1";
+import Favorites from "./components/Header/Favorites";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HeaderFooter />}>
-          <Route index element={<Mainpage />} />
+          <Route path="/home" element={<Mainpage />} />
           <Route path="/new-in" element={<NewIn />} />
           <Route path="/category" element={<CatalogueCategory />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/view" element={<QuickView />} />
           <Route path="/shopping-bag" element={<ShoppingBag />} />
           <Route path="*" element={<NotFound />} />

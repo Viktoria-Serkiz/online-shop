@@ -7,7 +7,8 @@ import {
   clothingError,
 } from "../store/actions/clothingAction";
 import Spinner from "../img/spinner.svg";
-import Like from "../img/like.svg";
+import Card from "../components/Card";
+import cataloguePhoto from "../img/cataloguePhoto.jpg";
 
 const CatalogueCategory = () => {
   const dispatch = useDispatch();
@@ -26,30 +27,51 @@ const CatalogueCategory = () => {
 
   return (
     <>
-      <div className="container card__container">
-        {loading && (
-          <div className="spinner">
-            <img src={Spinner} alt="loading..."></img>
+      <div className="container catalogue">
+        <div className="search">
+          {/* <Categories />
+          <Size /> */}
+        </div>
+        <div className="catalogue__inner">
+          <div className="photoCatalogue">
+            <h2 className="photoCatalogue__title">Final clearance</h2>
+            <p className="photoCatalogue__subtitle">
+              Take 20% off ‘Sale Must Haves’
+            </p>
+            <img
+              src={cataloguePhoto}
+              alt="foto"
+              className="photoCatalogue__photo"
+            />
           </div>
-        )}
-        {clothing &&
-          clothing.map(({ title, id, image, description, price }) => {
-            return (
-              <div className="card" key={id}>
-                <div className="card__img">
-                  <img src={`${image}`} alt="" width={255} />
+          <p className="catalogue__title">Dresses</p>
+          <div className="catalogue__sub">
+            <p className="catalogue__sub_text">1403 items</p>
+            <p className="catalogue__sub_text">
+              Sort by: <b>Price Low-High</b>
+            </p>
+          </div>
+          <div className="cards__container">
+            <div className="cards__wrap">
+              {loading && (
+                <div className="spinner">
+                  <img src={Spinner} alt="loading..."></img>
                 </div>
-                <p className="card__brand">{`${title}`}</p>
-                <p className="card__item">{`${description}`}</p>
-                <p className="card__price">{`${price}`}</p>
-
-                <button className="card__like">
-                  <img src={Like} alt="" width={16} height={14} />
-                </button>
-              </div>
-            );
-          })}
-        {error && error}
+              )}
+              {clothing &&
+                clothing.map((item, id) => {
+                  return <Card value={item} key={`catalogue__${id}`}></Card>;
+                })}
+              {error && error}
+            </div>
+          </div>
+          <div className="catalogue__more">
+            <p className="catalogue__more_text">
+              You’ve viewed 12 of 1403 products
+            </p>
+            <button className="catalogue__more_btn"> Load more</button>
+          </div>
+        </div>
       </div>
     </>
   );

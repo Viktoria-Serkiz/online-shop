@@ -30,11 +30,11 @@ const Slider = ({ className = "glide" }) => {
           <h2 className="glide__title">New arrivals</h2>
           <div className="glide__arrows" data-glide-el="controls">
             <button
-              className="glide__arrow glide__arrow--left"
+              className="glide__arrow glide__arrow_left"
               data-glide-dir="<"
             ></button>
             <button
-              className="glide__arrow glide__arrow--right"
+              className="glide__arrow glide__arrow_right"
               data-glide-dir=">"
             ></button>
           </div>

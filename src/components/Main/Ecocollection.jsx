@@ -7,16 +7,16 @@ const Ecocollection = () => {
         <section className="ecocollection">
           <h2 className="visually-hidden">Eco-collection</h2>
           <article className="ecocollection__article">
-            <h3 className="ecocollection__article--title">
+            <h3 className="ecocollection__article_title">
               Eco Aware brands: Exclusively at Dresnote
             </h3>
-            <p className="ecocollection__article--text">
+            <p className="ecocollection__article_text">
               Science Story is a collaboration between Dressnote and creative
               thinkers, researchers and brands who are developing cutting-edge
               materials designed to address the environmental impacts of the
               textile industry.
             </p>
-            <button className="ecocollection__article--button" type="button">
+            <button className="ecocollection__article_button" type="button">
               Shop Eco collection
             </button>
           </article>

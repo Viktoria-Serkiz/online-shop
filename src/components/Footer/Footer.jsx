@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer__wrapper">
           <FooterNav />
           <div className="footer__info">
-            <p className="footer__info--text">
+            <p className="footer__info_text">
               Sign up today for email exclusives including early access to Sale,
               the latest trends and arrivals from your favorite designers and
               can’t miss promotions.

@@ -9,7 +9,7 @@
   &__navigation {
     display: flex;
     margin-right: 25px;
-    &--list {
+    &_list {
       margin-right: 142px;
       &:nth-child(1) {
         width: 175px;
@@ -18,7 +18,7 @@
         width: 120px;
       }
     }
-    &--item {
+    &_item {
       list-style: none;
       font-size: 14px;
       line-height: 16px;
@@ -33,7 +33,7 @@
     }
   }
   &__info {
-    &--text {
+    &_text {
       font-size: 14px;
       line-height: 22px;
       color: $grey;
@@ -43,14 +43,14 @@
     padding-top: 24px;
     padding-bottom: 40px;
     color: $white;
-    &--input {
+    &_input {
       font-size: 14px;
       line-height: 16px;
       color: $greyform;
       padding: 10px 142px 10px 12px;
       border: none;
     }
-    &--button {
+    &_button {
       font-family: "Open Sans", sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -68,7 +68,7 @@
   &__icons {
     display: flex;
     align-items: center;
-    &--link {
+    &_link {
       padding-right: 20px;
     }
   }
@@ -76,12 +76,12 @@
     background-color: $white;
     padding-top: 15px;
     padding-bottom: 15px;
-    &--wrapper {
+    &_wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    &--text {
+    &_text {
       font-size: 14px;
       line-height: 22px;
       color: $greyform;

@@ -4,9 +4,9 @@ const FooterForm = () => {
       <input
         type="text"
         placeholder="Enter your Email"
-        className="footer__form--input"
+        className="footer__form_input"
       />
-      <button type="button" className="footer__form--button">
+      <button type="button" className="footer__form_button">
         Subscribe
       </button>
     </form>

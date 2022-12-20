@@ -8,19 +8,19 @@ import Youtubeicon from "../../img/youtube.svg";
 const Socialmedia = () => {
   return (
     <div className="footer__icons">
-      <Link href="/" className="footer__icons--link">
+      <Link href="/" className="footer__icons_link">
         <img src={Instagramicon} alt="" />
       </Link>
-      <Link href="/" className="footer__icons--link">
+      <Link href="/" className="footer__icons_link">
         <img src={Facebook} alt="" />
       </Link>
-      <Link href="/" className="footer__icons--link">
+      <Link href="/" className="footer__icons_link">
         <img src={Twittericon} alt="" />
       </Link>
-      <Link href="/" className="footer__icons--link">
+      <Link href="/" className="footer__icons_link">
         <img src={Pinteresticon} alt="" />
       </Link>
-      <Link href="/" className="footer__icons--link">
+      <Link href="/" className="footer__icons_link">
         <img src={Youtubeicon} alt="" />
       </Link>
     </div>

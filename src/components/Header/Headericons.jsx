@@ -1,23 +1,27 @@
+import { Link } from "react-router-dom";
+
 const Headericons = () => {
   return (
     <>
       <div>
-        <button type="button" className="header__icons">
-          <svg
-            width="20"
-            height="18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.4 2.8a4.6 4.6 0 0 0-6.5 0l-.9 1-.9-1a4.6 4.6 0 1 0-6.5 6.5l1 1 6.4 6.4 6.5-6.5.9-.9a4.6 4.6 0 0 0 0-6.5v0Z"
-              stroke="#E6E5E8"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        <Link to="/favorites">
+          <button type="button" className="header__icons">
+            <svg
+              width="20"
+              height="18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.4 2.8a4.6 4.6 0 0 0-6.5 0l-.9 1-.9-1a4.6 4.6 0 1 0-6.5 6.5l1 1 6.4 6.4 6.5-6.5.9-.9a4.6 4.6 0 0 0 0-6.5v0Z"
+                stroke="#E6E5E8"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Link>
         <button type="button" className="header__icons">
           <svg
             width="20"

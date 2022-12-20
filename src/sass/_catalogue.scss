@@ -1,4 +1,4 @@
-.newin {
+.catalogue {
   display: flex;
   justify-content: space-between;
   &__title {
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 0 20px;
-    &--text {
+    &_text {
       font-size: 12px;
       line-height: 16px;
       color: $grey;
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    &--text {
+    &_text {
       font-size: 12px;
       line-height: 16px;
       color: $greyform;
@@ -31,7 +31,7 @@
       width: 286px;
       text-align: center;
     }
-    &--btn {
+    &_btn {
       cursor: pointer;
       border-radius: 2px;
       border: 1px solid $grey;
@@ -43,12 +43,12 @@
       color: $header;
       padding: 10px 91px;
       margin: 24px 0 60px;
-      font-family: 'Open Sans', 'Arial', sans-serif;
+      font-family: "Open Sans", "Arial", sans-serif;
     }
   }
 }
 
-.photoNewIn {
+.photoCatalogue {
   position: relative;
   align-items: center;
   display: flex;

@@ -10,23 +10,27 @@ const NewIn = () => {
 
   return (
     <>
-      <div className="container newin">
+      <div className="container catalogue">
         <div className="search">
           <Categories />
           <Size />
         </div>
-        <div className="newin__inner">
-          <div className="photoNewIn">
-            <h2 className="photoNewIn__title">New in</h2>
-            <p className="photoNewIn__subtitle">
+        <div className="catalogue__inner">
+          <div className="photoCatalogue">
+            <h2 className="photoCatalogue__title">New in</h2>
+            <p className="photoCatalogue__subtitle">
               This season, inside is cancelled
             </p>
-            <img src={newInPhoto} alt="foto" className="photoNewIn__photo" />
+            <img
+              src={newInPhoto}
+              alt="foto"
+              className="photoCatalogue__photo"
+            />
           </div>
-          <p className="newin__title">New in</p>
-          <div className="newin__sub">
-            <p className="newin__sub--text">1403 items</p>
-            <p className="newin__sub--text">
+          <p className="catalogue__title">New in</p>
+          <div className="catalogue__sub">
+            <p className="catalogue__sub_text">1403 items</p>
+            <p className="catalogue__sub_text">
               Sort by: <b>Price Low-High</b>
             </p>
           </div>
@@ -38,24 +42,17 @@ const NewIn = () => {
                 </div>
               )}
               {clothing &&
-                clothing.map(({ image, price, title, id }) => {
-                  return (
-                    <Card
-                      image={image}
-                      price={price}
-                      title={title}
-                      key={`newInItem__${id}`}
-                    ></Card>
-                  );
+                clothing.map((item, id) => {
+                  return <Card value={item} key={`newIn__${id}`}></Card>;
                 })}
               {error && error}
             </div>
           </div>
-          <div className="newin__more">
-            <p className="newin__more--text">
+          <div className="catalogue__more">
+            <p className="catalogue__more_text">
               You’ve viewed 12 of 1403 products
             </p>
-            <button className="newin__more--btn"> Load more</button>
+            <button className="catalogue__more_btn"> Load more</button>
           </div>
         </div>
       </div>
