@@ -66,8 +66,6 @@
     align-items: center;
     margin: 12px 0 30px 0;
     &_btn {
-      cursor: pointer;
-      border: none;
       width: 30px;
       height: 30px;
       display: flex;
@@ -75,7 +73,6 @@
     }
   }
   &__description {
-    margin-top: 42px;
     &_title {
       font-weight: 600;
       font-size: 14px;
@@ -109,6 +106,16 @@
   list-style: none;
   display: flex;
   position: relative;
+  &::after {
+    content: "";
+    background: url(../Header/arrow-down.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 17px;
+  }
   &__option {
     margin: 12px auto 12px 12px;
     font-size: 14px;
@@ -133,7 +140,6 @@
       margin: 12px auto 12px 20px;
       list-style: none;
       color: $header;
-      cursor: pointer;
       &:hover {
         color: $red;
         font-weight: 700;
@@ -142,5 +148,34 @@
     &_hidden {
       display: none;
     }
+  }
+}
+
+.addproduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 31px;
+  padding-bottom: 41px;
+  &__button {
+    background: $header;
+    border-radius: 2px;
+    padding: 12px 107px;
+    color: $border;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    &:hover {
+      background-color: $pink;
+      color: $header;
+    }
+  }
+  &__like {
+    background: #e4e5e8;
+    border-radius: 30px;
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

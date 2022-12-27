@@ -8,7 +8,7 @@ import ProductPage from "./pages/ProductPage";
 import QuickView from "./pages/QuickView";
 import ShoppingBag from "./pages/ShoppingBag";
 import NotFound from "./pages/NotFound.1";
-import Favorites from "./components/Header/Favorites";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (

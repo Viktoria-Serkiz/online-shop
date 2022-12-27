@@ -6,6 +6,7 @@ import axios from "axios";
 import Spinner from "../img/spinner.svg";
 import SizeOption from "../components/ProductPage/SizeOption";
 import ColorSelection from "../components/ProductPage/ColorSelection";
+import AddProduct from "../components/ProductPage/AddProduct";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
@@ -45,6 +46,7 @@ const ProductPage = () => {
               <p className="searchpage__size_subtitle">Size guide</p>
             </div>
             <SizeOption />
+            <AddProduct />
             <section>
               <h3 className="visually-hidden">Product information</h3>
               <article className="searchpage__description">

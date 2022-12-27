@@ -6,7 +6,7 @@ const FooterForm = () => {
         placeholder="Enter your Email"
         className="footer__form_input"
       />
-      <button type="button" className="footer__form_button">
+      <button type="button" className="footer__form_button btn">
         Subscribe
       </button>
     </form>

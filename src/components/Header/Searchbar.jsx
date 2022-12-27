@@ -58,7 +58,7 @@ const Searchbar = () => {
   return (
     <>
       <form className="header__form">
-        <button type="button" className="header__form_button">
+        <button type="button" className="header__form_button btn">
           <svg
             width="20"
             height="20"

@@ -52,7 +52,7 @@ const NewIn = () => {
             <p className="catalogue__more_text">
               You’ve viewed 12 of 1403 products
             </p>
-            <button className="catalogue__more_btn"> Load more</button>
+            <button className="catalogue__more_btn btn"> Load more</button>
           </div>
         </div>
       </div>

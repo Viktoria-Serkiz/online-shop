@@ -13,7 +13,7 @@ const ColorSelection = () => {
       <div className="searchpage__color">
         {colors.map((value, index) => (
           <button
-            className="color searchpage__color_btn"
+            className="color searchpage__color_btn btn"
             onClick={(e) => {
               setColorSelect(value);
             }}

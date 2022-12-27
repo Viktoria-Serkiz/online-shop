@@ -9,6 +9,8 @@ import {
 import Spinner from "../img/spinner.svg";
 import Card from "../components/Card";
 import cataloguePhoto from "../img/cataloguePhoto.jpg";
+import Categories from "../components/Search/Categories";
+import Size from "../components/Search/Size";
 
 const CatalogueCategory = () => {
   const dispatch = useDispatch();
@@ -29,8 +31,8 @@ const CatalogueCategory = () => {
     <>
       <div className="container catalogue">
         <div className="search">
-          {/* <Categories />
-          <Size /> */}
+          <Categories />
+          <Size />
         </div>
         <div className="catalogue__inner">
           <div className="photoCatalogue">

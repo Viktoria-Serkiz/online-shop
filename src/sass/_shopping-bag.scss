@@ -1,0 +1,41 @@
+.shopping-bag {
+  &__title {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    color: $header;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 18px;
+    width: 70%;
+  }
+  &__name {
+    display: contents;
+    // border: 2px solid $border;
+    &_item {
+      font-size: 14px;
+      line-height: 16px;
+      color: $greyform;
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / 5;
+    grid-row: 3/4;
+    &_item {
+      font-size: 14px;
+      line-height: 16px;
+      color: $greyform;
+    }
+  }
+}

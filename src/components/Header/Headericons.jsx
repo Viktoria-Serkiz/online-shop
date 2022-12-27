@@ -5,7 +5,7 @@ const Headericons = () => {
     <>
       <div>
         <Link to="/favorites">
-          <button type="button" className="header__icons">
+          <button type="button" className="header__icons btn">
             <svg
               width="20"
               height="18"
@@ -22,7 +22,7 @@ const Headericons = () => {
             </svg>
           </button>
         </Link>
-        <button type="button" className="header__icons">
+        <button type="button" className="header__icons btn">
           <svg
             width="20"
             height="20"
@@ -38,29 +38,31 @@ const Headericons = () => {
             />
           </svg>
         </button>
-        <button type="button" className="header__icons">
-          <svg
-            width="20"
-            height="20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 1.7 2.5 5v11.7a1.7 1.7 0 0 0 1.7 1.6h11.6a1.7 1.7 0 0 0 1.7-1.6V5L15 1.7H5ZM2.5 5h15"
-              stroke="#E6E5E8"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M13.3 8.3a3.3 3.3 0 1 1-6.6 0"
-              stroke="#E6E5E8"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        <Link to="/shopping-bag">
+          <button type="button" className="header__icons btn">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 1.7 2.5 5v11.7a1.7 1.7 0 0 0 1.7 1.6h11.6a1.7 1.7 0 0 0 1.7-1.6V5L15 1.7H5ZM2.5 5h15"
+                stroke="#E6E5E8"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M13.3 8.3a3.3 3.3 0 1 1-6.6 0"
+                stroke="#E6E5E8"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Link>
       </div>
     </>
   );

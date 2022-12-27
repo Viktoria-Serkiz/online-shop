@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 75px;
   &__tittle {
     font-weight: 600;
     font-size: 16px;
@@ -27,11 +28,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 23px;
+  border-bottom: 1px solid $border;
+  width: 255px;
   &__tittle {
     font-weight: 600;
     font-size: 16px;
     line-height: 18px;
     color: $header;
+    margin-bottom: 18px;
   }
   &__search {
     font-size: 14px;

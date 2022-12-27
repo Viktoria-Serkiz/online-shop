@@ -8,11 +8,9 @@
     padding-bottom: 22px;
   }
   &__icons {
-    border: none;
     background-color: transparent;
-    cursor: pointer;
     margin-left: 20px;
-    & svg:hover path{
+    & svg:hover path {
       stroke: $pink;
     }
   }
@@ -40,9 +38,7 @@
       outline: none;
     }
     &_button {
-      border: none;
       background-color: transparent;
-      cursor: pointer;
     }
     &_search {
       position: absolute;
@@ -84,11 +80,5 @@
         color: $grey;
       }
     }
-  }
-  &__favorites {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

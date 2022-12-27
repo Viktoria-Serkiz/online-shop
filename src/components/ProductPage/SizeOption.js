@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function SizeOption() {
-  const sizes = [34, "xs", 36, "s", 38, "m", 40, "l", 42, "xl"];
+  const sizes = [34, 36, 38, 40, 42];
   const [selection, setSelection] = useState(null);
   const [hidden, setHidden] = useState(true);
 
@@ -28,7 +28,7 @@ function SizeOption() {
           {sizes.map((value) => {
             return (
               <li
-                className="selectsize__size-element"
+                className="selectsize__size-element btn"
                 onClick={() => {
                   setSelection(value);
                   setHidden(true);

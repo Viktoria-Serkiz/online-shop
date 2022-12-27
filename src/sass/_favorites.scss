@@ -1,0 +1,40 @@
+.favorites {
+  &__title {
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+  }
+  &__count {
+    text-align: center;
+    padding: 15px;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__empty {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &_text {
+      font-weight: 600;
+      margin: 5px 0 5px;
+    }
+    &_button {
+      padding: 10px 40px 10px;
+      border-radius: 2px;
+      background-color: $header;
+      color: $white;
+      font-size: 14px;
+      line-height: 16px;
+      margin-top: 20px;
+      font-weight: 600;
+      &:hover {
+        background-color: $pink;
+        color: $header;
+      }
+    }
+  }
+}
