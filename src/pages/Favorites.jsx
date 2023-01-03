@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Card from "../components/Card";
 import { Link } from "react-router-dom";
-import EmptyCard from "../img/empty-cart.png";
+import addToFavorites from "../img/heart.png";
 
 const Favorites = () => {
   const favorites = useSelector((store) => store.favorites);
@@ -23,10 +23,9 @@ const Favorites = () => {
   }
   return (
     <div className="container">
-      {/* <h1 className="favorites">Favorites to Be Desplayed Here</h1> */}
       <div className="favorites__empty">
         <div>
-          <img src={EmptyCard} alt="" width={100} height={100} />
+          <img src={addToFavorites} alt="" width={100} height={100} />
         </div>
         <p className="favorites__empty_text">You have no saved items.</p>
         <p className="favorites__empty_text">

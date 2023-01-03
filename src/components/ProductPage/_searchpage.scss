@@ -106,15 +106,16 @@
   list-style: none;
   display: flex;
   position: relative;
-  &::after {
-    content: "";
-    background: url(../Header/arrow-down.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    right: 0;
-    top: 17px;
+  &__button {
+    background-color: transparent;
+    padding-right: 10px;
+    &-icon {
+      transition: all 0.3s linear;
+      &_active {
+        transform: rotate(180deg);
+        transition: all 0.3s linear;
+      }
+    }
   }
   &__option {
     margin: 12px auto 12px 12px;

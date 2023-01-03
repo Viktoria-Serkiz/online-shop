@@ -6,12 +6,17 @@ import axios from "axios";
 import Spinner from "../img/spinner.svg";
 import SizeOption from "../components/ProductPage/SizeOption";
 import ColorSelection from "../components/ProductPage/ColorSelection";
-import AddProduct from "../components/ProductPage/AddProduct";
+import { Wishlist } from "../components/icons";
+import { cardAdd } from "../store/actions/cardAction";
+import { useDispatch } from "react-redux";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
   const [productData, setProductData] = useState({});
+  const [selection, setSelection] = useState(null);
   const { id } = useParams();
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setLoading(true);
@@ -45,8 +50,27 @@ const ProductPage = () => {
               <p className="searchpage__size_subtitle">Select size:</p>
               <p className="searchpage__size_subtitle">Size guide</p>
             </div>
-            <SizeOption />
-            <AddProduct />
+            <SizeOption setSelection={setSelection} selection={selection} />
+            <div className="addproduct">
+              <button
+                type="button"
+                className="addproduct__button btn"
+                onClick={() => {
+                  dispatch(
+                    cardAdd({
+                      ...productData,
+                      size: selection,
+                      costDelivery: 10,
+                      count: 1,
+                      itemId: new Date().getTime(),
+                    })
+                  );
+                }}
+              >
+                Add to cart
+              </button>
+              <button className="addproduct__like btn">{<Wishlist />}</button>
+            </div>
             <section>
               <h3 className="visually-hidden">Product information</h3>
               <article className="searchpage__description">
