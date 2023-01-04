@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import StarRating from "../components//ProductPage/StarRating";
-import Slider2 from "../components/Main/Slider2";
+import { Slider } from "../components/Main/Slider";
 import axios from "axios";
 import Spinner from "../img/spinner.svg";
 import SizeOption from "../components/ProductPage/SizeOption";
@@ -9,12 +9,15 @@ import ColorSelection from "../components/ProductPage/ColorSelection";
 import { Wishlist } from "../components/icons";
 import { cardAdd } from "../store/actions/cardAction";
 import { useDispatch } from "react-redux";
+import useInFavorites from "../hooks/useInFavorites";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
   const [productData, setProductData] = useState({});
   const [selection, setSelection] = useState(null);
+  const [colorSelect, setColorSelect] = useState(null);
   const { id } = useParams();
+  const { inFavorites, toggleFavorites } = useInFavorites(id, productData);
 
   const dispatch = useDispatch();
 
@@ -45,7 +48,10 @@ const ProductPage = () => {
             <h2 className="searchpage__info_title">{title}</h2>
             <StarRating rate={Math.round(rating?.rate)} vote={rating?.count} />
             <p className="searchpage__price">${price}</p>
-            <ColorSelection />
+            <ColorSelection
+              setColorSelect={setColorSelect}
+              colorSelect={colorSelect}
+            />
             <div className="searchpage__size">
               <p className="searchpage__size_subtitle">Select size:</p>
               <p className="searchpage__size_subtitle">Size guide</p>
@@ -60,6 +66,7 @@ const ProductPage = () => {
                     cardAdd({
                       ...productData,
                       size: selection,
+                      color: colorSelect,
                       costDelivery: 10,
                       count: 1,
                       itemId: new Date().getTime(),
@@ -69,7 +76,17 @@ const ProductPage = () => {
               >
                 Add to cart
               </button>
-              <button className="addproduct__like btn">{<Wishlist />}</button>
+              <button
+                className="addproduct__like btn"
+                onClick={() => {
+                  toggleFavorites();
+                }}
+              >
+                <Wishlist className={`card__likesvg ${
+                    inFavorites() ? "card__likesvg_active" : null
+                  }`}
+                />
+              </button>
             </div>
             <section>
               <h3 className="visually-hidden">Product information</h3>
@@ -82,7 +99,7 @@ const ProductPage = () => {
             </section>
           </div>
         </div>
-        <Slider2 />
+        <Slider />
       </div>
     </div>
   );

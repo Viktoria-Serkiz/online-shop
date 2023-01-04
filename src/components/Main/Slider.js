@@ -13,7 +13,7 @@ const glideConfig = {
   autoplay: 4000,
   animationDuration: 1000,
   animationTimingFunc: "linear",
-  type: "slider",
+  type: "carousel",
 };
 
 const Slider = ({ className = "glide" }) => {

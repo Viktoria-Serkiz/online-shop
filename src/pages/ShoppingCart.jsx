@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Slider2 from "../components/Main/Slider2";
+import { Slider } from "../components/Main/Slider";
 import Partners from "../components/Main/Partners";
 import CartItems from "../components/ShoppingCart/CartItems";
 import ClearBag from "../components/ShoppingCart/ClearBag";
@@ -46,7 +46,7 @@ const ShoppingCart = () => {
             shippingSum={subtotal.shippingSum}
           />
         </div>
-        <Slider2 />
+        <Slider />
         <Partners />
       </div>
     );

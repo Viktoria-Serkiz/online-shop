@@ -8,6 +8,7 @@ const CartItems = ({
   category,
   title,
   size,
+  color,
   price,
   count: countItem,
   itemId,
@@ -32,10 +33,7 @@ const CartItems = ({
           <span className="bag-card__about_title text">{category}</span>
           <h2 className="bag-card__about_subtitle">{title}</h2>
           <div className="bag-card__about_details">
-            <span className="bag-card__about_color text">Color:</span>
-            <span className="bag-card__about_color text">
-              White/Red patterned
-            </span>
+            <span className="bag-card__about_color text">Color: {color}</span>
           </div>
           <span className="text bag-card__about_size">Size: {size}</span>
         </div>

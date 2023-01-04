@@ -11,7 +11,7 @@ const glide = {
   perView: 4,
   gap: 30,
   autoplay: 3000,
-  type: "carrousel",
+  type: "carousel",
 };
 
 const Slider2 = ({ className = "glide2" }) => {
@@ -28,11 +28,11 @@ const Slider2 = ({ className = "glide2" }) => {
           <h2 className="glide__title">Our picks for you</h2>
           <div className="glide__arrows" data-glide-el="controls">
             <button
-              className="glide__arrow glide__arrow_left"
+              className="glide__arrow glide__arrow--left"
               data-glide-dir="<"
             ></button>
             <button
-              className="glide__arrow glide__arrow_right"
+              className="glide__arrow glide__arrow--right"
               data-glide-dir=">"
             ></button>
           </div>

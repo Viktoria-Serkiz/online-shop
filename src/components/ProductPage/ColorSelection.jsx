@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-const ColorSelection = () => {
-  const [colorSelect, setColorSelect] = useState(null);
+const ColorSelection = ({ colorSelect, setColorSelect }) => {
   const colors = ["Red", "Violet"];
 
   return (
