@@ -147,6 +147,7 @@
       &:hover {
         background-color: $pink;
         color: $header;
+        transition: all 0.2s linear;
       }
     }
   }
@@ -175,6 +176,7 @@
     &:hover {
       background-color: $pink;
       color: $header;
+      transition: all 0.2s linear;
     }
   }
 }

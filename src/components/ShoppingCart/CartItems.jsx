@@ -9,8 +9,8 @@ const CartItems = ({
   title,
   size,
   color,
-  price,
-  count: countItem,
+  price = 0,
+  count: countItem = 0,
   itemId,
 }) => {
   const [count, setCount] = useState(countItem);
@@ -64,7 +64,7 @@ const CartItems = ({
       </div>
       <div className="bag-card__total">
         <span className="bag-card__total_price">
-          ${Math.round(count * price)}
+          ${(count * price).toFixed(2)}
         </span>
         <button
           className="bag-card__total_delete btn"

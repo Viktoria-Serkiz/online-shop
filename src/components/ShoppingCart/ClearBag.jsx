@@ -2,7 +2,7 @@ import { TrashSvg } from "./shopIcon";
 import { cardRemoveAll } from "../../store/actions/cardAction";
 import { useDispatch } from "react-redux";
 
-const ClearBag = ({ subtotal }) => {
+const ClearBag = ({ subtotal = 0 }) => {
   const dispatch = useDispatch();
 
   return (
@@ -22,7 +22,7 @@ const ClearBag = ({ subtotal }) => {
       <div className="bag-clear__total">
         <span className="bag-clear__total_item">Subtotal:</span>
         <span className="bag-clear__total_item bag-clear__total_price">
-          ${Math.round(subtotal)}
+          ${subtotal.toFixed(2)}
         </span>
       </div>
     </div>

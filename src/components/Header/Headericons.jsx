@@ -22,22 +22,24 @@ const Headericons = () => {
             </svg>
           </button>
         </Link>
-        <button type="button" className="header__icons btn">
-          <svg
-            width="20"
-            height="20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.7 17.5v-1.7a3.3 3.3 0 0 0-3.4-3.3H6.7a3.3 3.3 0 0 0-3.4 3.3v1.7M10 9.2a3.3 3.3 0 1 0 0-6.7 3.3 3.3 0 0 0 0 6.7Z"
-              stroke="#E6E5E8"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        <Link to="/signIn">
+          <button type="button" className="header__icons btn">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.7 17.5v-1.7a3.3 3.3 0 0 0-3.4-3.3H6.7a3.3 3.3 0 0 0-3.4 3.3v1.7M10 9.2a3.3 3.3 0 1 0 0-6.7 3.3 3.3 0 0 0 0 6.7Z"
+                stroke="#E6E5E8"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Link>
         <Link to="/shopping-bag">
           <button type="button" className="header__icons btn">
             <svg
