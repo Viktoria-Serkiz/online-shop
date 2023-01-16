@@ -1,5 +1,3 @@
-import Categories from "../components/Search/Categories";
-import Size from "../components/Search/Size";
 import { useSelector } from "react-redux";
 import newInPhoto from "../img/newInPhoto.jpg";
 import Spinner from "../img/spinner.svg";
@@ -11,10 +9,7 @@ const NewIn = () => {
   return (
     <>
       <div className="container catalogue">
-        <div className="search">
-          <Categories />
-          <Size />
-        </div>
+        <div className="search"></div>
         <div className="catalogue__inner">
           <div className="photoCatalogue">
             <h2 className="photoCatalogue__title">New in</h2>
