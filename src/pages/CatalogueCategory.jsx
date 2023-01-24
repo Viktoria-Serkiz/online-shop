@@ -11,10 +11,13 @@ import Card from "../components/Card";
 import cataloguePhoto from "../img/cataloguePhoto.jpg";
 import Categories from "../components/Search/Categories";
 import Size from "../components/Search/Size";
+import { useLocation } from "react-router-dom";
 
 const CatalogueCategory = () => {
   const dispatch = useDispatch();
   const { loading, error, clothing } = useSelector((store) => store.clothing);
+
+  let location = useLocation();
 
   useEffect(() => {
     dispatch(clothingLoading());
@@ -25,7 +28,7 @@ const CatalogueCategory = () => {
       .catch((error) => {
         dispatch(clothingError(error.massage));
       });
-  }, []);
+  }, [location]);
 
   return (
     <>

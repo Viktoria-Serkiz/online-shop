@@ -17,9 +17,9 @@
 @import "./components/Search/categories";
 @import "./sass/spinner";
 @import "./sass/catalogue";
-@import "./components/ProductPage/searchpage";
-@import "./components/ProductPage/rating";
-@import "./components/ShoppingCart/shopping-bag";
+@import "./pages/ProductPage/searchpage";
+@import "./pages/ProductPage/rating";
+@import "./pages/ShoppingCart/shopping-bag";
 @import "./sass/favorites";
 @import "./sass/notfound";
-@import "./components/SignIn/signIn.scss";
+@import "./pages/SignIn/signIn.scss";

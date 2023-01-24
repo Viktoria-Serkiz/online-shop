@@ -3,7 +3,6 @@ import Nav from "./Nav";
 import Searchbar from "./Searchbar";
 import Logo from "../../img/dressnote.svg";
 import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -30,7 +29,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <Outlet />
     </>
   );
 };

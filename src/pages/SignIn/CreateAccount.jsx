@@ -1,5 +1,5 @@
-import signInPhoto from "../components/SignIn/img/signIn-photo.jpg";
-import CreateAcc from "../components/SignIn/CreateAcc";
+import signInPhoto from "../../pages/SignIn/img/signIn-photo.jpg";
+import CreateAcc from "../../pages/SignIn/CreateAcc";
 
 const CreateAccount = () => {
   return (

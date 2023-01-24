@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import StarRating from "../components//ProductPage/StarRating";
-import { Slider } from "../components/Main/Slider";
+import StarRating from "./StarRating";
+import { Slider } from "../../components/Slider";
 import axios from "axios";
-import Spinner from "../img/spinner.svg";
-import SizeOption from "../components/ProductPage/SizeOption";
-import ColorSelection from "../components/ProductPage/ColorSelection";
-import { Wishlist } from "../components/icons";
-import { cardAdd } from "../store/actions/cardAction";
+import Spinner from "../../img/spinner.svg";
+import SizeOption from "./SizeOption";
+import ColorSelection from "./ColorSelection";
+import { Wishlist } from "../../components/icons";
+import { cardAdd } from "../../store/actions/cardAction";
 import { useDispatch } from "react-redux";
-import useInFavorites from "../hooks/useInFavorites";
+import useInFavorites from "../../hooks/useInFavorites";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
@@ -82,7 +82,8 @@ const ProductPage = () => {
                   toggleFavorites();
                 }}
               >
-                <Wishlist className={`card__likesvg ${
+                <Wishlist
+                  className={`card__likesvg ${
                     inFavorites() ? "card__likesvg_active" : null
                   }`}
                 />

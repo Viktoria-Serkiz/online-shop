@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -6,34 +6,34 @@ const Nav = () => {
       <nav className="header__nav">
         <ul className="header__nav_list">
           <li className="header__nav_item">
-            <Link to="/new-in" className="header__nav_link">
+            <NavLink to="/new-in" className="header__nav_link">
               New in
-            </Link>
+            </NavLink>
           </li>
           <li className="header__nav_item">
-            <Link to="/category" className="header__nav_link">
+            <NavLink to="/category" className="header__nav_link">
               Clothing
-            </Link>
+            </NavLink>
           </li>
           <li className="header__nav_item">
-            <Link to="" className="header__nav_link">
+            <NavLink to="" className="header__nav_link">
               Shoes
-            </Link>
+            </NavLink>
           </li>
           <li className="header__nav_item">
-            <Link to="" className="header__nav_link">
+            <NavLink to="" className="header__nav_link">
               Accessories
-            </Link>
+            </NavLink>
           </li>
           <li className="header__nav_item">
-            <Link to="" className="header__nav_link">
+            <NavLink to="" className="header__nav_link">
               Brands
-            </Link>
+            </NavLink>
           </li>
           <li className="header__nav_item">
-            <Link to="" className="header__nav_link">
+            <NavLink to="" className="header__nav_link">
               Sale
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

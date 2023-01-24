@@ -1,5 +1,5 @@
-import SignInValidation from "../components/SignIn/SignInValidation";
-import signInPhoto from "../components/SignIn/img/signIn-photo.jpg";
+import SignInValidation from "../../pages/SignIn/SignInValidation";
+import signInPhoto from "../../pages/SignIn/img/signIn-photo.jpg";
 
 const SignIn = () => {
   return (

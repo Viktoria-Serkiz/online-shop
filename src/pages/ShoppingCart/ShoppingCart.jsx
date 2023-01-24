@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Slider } from "../components/Main/Slider";
-import Partners from "../components/Main/Partners";
-import CartItems from "../components/ShoppingCart/CartItems";
-import ClearBag from "../components/ShoppingCart/ClearBag";
-import BagOrder from "../components/ShoppingCart/BagOrder";
+import { Slider } from "../../components/Slider";
+import Partners from "../Main/Partners";
+import CartItems from "../ShoppingCart/CartItems";
+import ClearBag from "../ShoppingCart/ClearBag";
+import BagOrder from "../ShoppingCart/BagOrder";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import EmptyCard from "../img/add-to-cart.png";
+import EmptyCard from "../../img/add-to-cart.png";
 
 const ShoppingCart = () => {
   const [subtotal, setSubtotal] = useState(0);
